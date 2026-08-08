@@ -2,6 +2,9 @@
 FROM maven:3.9.6-eclipse-temurin-17-alpine AS builder
 WORKDIR /app
 
+# Upgrade packages for security
+RUN apk update && apk upgrade --no-cache
+
 # Copy pom.xml and cache dependencies
 COPY pom.xml .
 RUN mvn dependency:go-offline -B
@@ -13,6 +16,9 @@ RUN mvn clean package -DskipTests
 # Stage 2: Runtime image
 FROM eclipse-temurin:17-jre-alpine
 WORKDIR /app
+
+# Upgrade packages to patch OS-level vulnerabilities
+RUN apk update && apk upgrade --no-cache
 
 # Create a non-root user for running the app securely
 RUN addgroup -S appgroup && adduser -S appuser -G appgroup
