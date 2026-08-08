@@ -1,0 +1,22 @@
+# Maven build output
+target/
+
+# Git files
+.git/
+.gitignore
+
+# IDE configurations
+.idea/
+.vscode/
+*.iml
+*.ipr
+*.iws
+
+# Docker-related files
+docker-compose.yml
+Dockerfile
+.dockerignore
+
+# Documentation and others
+*.md
+help/
