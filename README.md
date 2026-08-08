@@ -1,4 +1,4 @@
-# Employee Management Redis Cache API
+# Optimizing CRUD Operations with Redis Cache
 
 ![Poster](src/main/resources/static/image.png)
 
