@@ -2,6 +2,9 @@
 
 ![Poster](src/main/resources/static/image.png)
 
+> [!Tip]
+> Later switch to more stable version of springboot i.e 3.2.0
+
 A production-quality Spring Boot backend demonstrating how to integrate **Spring Boot 3** with **Redis Caching (Spring Cache)** and **Spring Security (CORS & CSRF protection)**. The application follows a clean layered architecture and performs optimized CRUD operations with database-to-cache synchronization.
 
 ## Overview
